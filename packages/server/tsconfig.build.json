@@ -1,16 +1,17 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "composite": true,
     "declaration": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
   },
   "references": [
     {
       "path": "../common/tsconfig.build.json"
     }
   ],
-  "include": [
-    "src/**/*"
+  "exclude": [
+    "src/**/*.spec.ts"
   ]
 }
