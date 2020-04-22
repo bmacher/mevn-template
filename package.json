@@ -8,7 +8,8 @@
     "common": "yarn workspace @mevn/common",
     "server": "yarn workspace @mevn/server",
     "start:server": "yarn server start",
-    "clean": "lerna run clean"
+    "clean": "lerna run clean",
+    "lint": "lerna run lint"
   },
   "dependencies": {
     "concurrently": "^5.1.0",
