@@ -12,7 +12,7 @@
   "scripts": {
     "start": "concurrently --kill-others-on-fail 'npm:start:*'",
     "start:compile": "tsc --build tsconfig.build.json --watch",
-    "start:nodemon": "nodemon dist/index.js",
+    "start:nodemon": "nodemon dist/index.js --delay 2000ms",
     "build": "yarn clean && yarn compile",
     "compile": "tsc -b tsconfig.build.json",
     "clean": "rm -rf dist && rm -f tsconfig.build.tsbuildinfo",
