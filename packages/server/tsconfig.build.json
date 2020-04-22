@@ -3,8 +3,6 @@
   "compilerOptions": {
     "composite": true,
     "declaration": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
   },
   "references": [
     {
@@ -12,6 +10,8 @@
     }
   ],
   "exclude": [
+    "node_modules",
+    "dist",
     "src/**/*.spec.ts"
   ]
 }
