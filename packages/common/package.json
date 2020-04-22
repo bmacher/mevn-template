@@ -1,0 +1,20 @@
+{
+  "name": "@mevn/common",
+  "version": "0.1.0",
+  "author": "Benjamin Macher",
+  "description": "Shared functionality of mevn.",
+  "license": "MIT",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "compile": "tsc -b tsconfig.build.json",
+    "clean": "rm -rf dist && rm -f tsconfig.build.tsbuildinfo"
+  },
+  "devDependencies": {
+    "typescript": "~3.4.5"
+  }
+}
