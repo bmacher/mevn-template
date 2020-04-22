@@ -5,9 +5,13 @@
     "packages/*"
   ],
   "scripts": {
-    "common": "yarn workspace @mevn/common"
+    "common": "yarn workspace @mevn/common",
+    "server": "yarn workspace @mevn/server",
+    "start:server": "yarn server start",
+    "clean": "lerna run clean"
   },
-  "devDependencies": {
+  "dependencies": {
+    "concurrently": "^5.1.0",
     "lerna": "^3.20.2"
   }
 }
