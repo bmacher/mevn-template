@@ -10,14 +10,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean && yarn compile",
+    "build": "yarn build:clean && yarn compile",
+    "build:clean": "rm -rf dist && rm -f tsconfig.build.tsbuildinfo",
     "compile": "tsc -b tsconfig.build.json",
-    "clean": "rm -rf dist && rm -f tsconfig.build.tsbuildinfo",
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
     "test": "jest",
     "test:verbose": "jest --verbose",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "yarn test:clean && jest --coverage",
+    "test:clean": "rm -rf coverage"
   },
   "dependencies": {},
   "devDependencies": {
