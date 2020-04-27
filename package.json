@@ -8,10 +8,11 @@
     "common": "yarn workspace @mevn/common",
     "server": "yarn workspace @mevn/server",
     "start:server": "yarn server start",
+    "build": "lerna run build",
     "clean": "lerna run build:clean && lerna run test:clean",
     "lint": "lerna run lint",
-    "test": "jest",
-    "test:verbose": "jest --verbose",
+    "test": "yarn build && jest",
+    "test:verbose": "yarn build && jest --verbose",
     "test:coverage": "rm -rf coverage && jest --coverage"
   },
   "dependencies": {
