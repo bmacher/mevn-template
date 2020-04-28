@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "scripts": {
+    "client": "yarn workspace @mevn/client",
     "common": "yarn workspace @mevn/common",
     "server": "yarn workspace @mevn/server",
     "start:server": "yarn server start",
