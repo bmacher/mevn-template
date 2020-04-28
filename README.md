@@ -10,8 +10,11 @@
   - nodemon: Error: listen EADDRINUSE: address already in use
     - `--delay`
 - package as dependency
-  - yarn workspace @mevn/server add @packages/common did not work
-  - @1.0.0 -> need to specify version
+  - yarn workspace @mevn/server add @mevn/common did not work
+  - @0.1.0 -> need to specify version
+- vue app add @mevn/common
+  -  `../common/dist/index.js' should be in one project
+  - https://github.com/vuejs/vue-cli/issues/2421
 
 ## Resources
 
