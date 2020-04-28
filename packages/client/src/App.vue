@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <h1>{{ messageFromCommon }}</h1>
+    <h1>{{ messageFromBackend }}</h1>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component
+export default class Counter extends Vue {
+  public messageFromBackend = 'From Backend: Loading...';
+
+  private created(): void {
+    fetch('http://localhost:3000')
+      .then((data) => data.text())
+      .then((data) => { this.messageFromBackend = `From Backend: ${data}`; })
+      .catch(() => { this.messageFromBackend = 'From Backend: Could not load data.'; });
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -15,18 +29,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
