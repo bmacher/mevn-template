@@ -11,8 +11,8 @@
   ],
   "scripts": {
     "build": "yarn build:clean && yarn compile",
-    "build:clean": "rm -rf dist && rm -f tsconfig.build.tsbuildinfo",
-    "compile": "tsc -b tsconfig.build.json",
+    "build:clean": "rm -rf dist",
+    "compile": "tsc tsconfig.build.json",
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
     "test": "jest",
