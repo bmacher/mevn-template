@@ -11,12 +11,10 @@
   ],
   "scripts": {
     "start": "concurrently --kill-others-on-fail 'npm:start:*'",
-    "start:compile": "tsc --build tsconfig.build.json --watch",
+    "start:build": "webpack --watch",
     "start:nodemon": "nodemon dist/index.js --delay 2000ms",
-    "build": "yarn clean && yarn compile",
-    "build:clean": "rm -rf dist && rm -f tsconfig.build.tsbuildinfo",
-    "compile": "tsc -b tsconfig.build.json",
-    "clean": "rm -rf dist && rm -f tsconfig.build.tsbuildinfo",
+    "build": "yarn build:clean && webpack",
+    "build:clean": "rm -rf dist",
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
     "test": "yarn build && jest",
@@ -50,6 +48,9 @@
     "nodemon": "^2.0.3",
     "prettier": "^2.0.4",
     "ts-jest": "^25.4.0",
-    "typescript": "~3.4.5"
+    "ts-loader": "^7.0.1",
+    "typescript": "~3.4.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
