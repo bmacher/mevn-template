@@ -1,26 +1,24 @@
 <template>
   <div id="app">
-    <h1>{{ messageFromCommon }}</h1>
-    <h1>{{ messageFromBackend }}</h1>
+    <hello-world />
+    <h1>{{ message }}</h1>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import { sayHello } from '@mevn/common';
+import { HelloWorld } from '@/components';
 
-@Component
+@Component({ components: { HelloWorld } })
 export default class Counter extends Vue {
-  public messageFromCommon = `From Common: ${sayHello('world')}`;
-
-  public messageFromBackend = 'From Backend: Loading...';
+  public message = 'From Backend: Loading...';
 
   private created(): void {
     fetch('http://localhost:3000')
       .then((data) => data.text())
-      .then((data) => { this.messageFromBackend = `From Backend: ${data}`; })
-      .catch(() => { this.messageFromBackend = 'From Backend: Could not load data.'; });
+      .then((data) => { this.message = `From Backend: ${data}`; })
+      .catch(() => { this.message = 'From Backend: Could not load data.'; });
   }
 }
 </script>
