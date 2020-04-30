@@ -7,12 +7,13 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "files": [
+    "dist",
     "src"
   ],
   "scripts": {
     "build": "yarn build:clean && yarn compile",
     "build:clean": "rm -rf dist",
-    "compile": "tsc tsconfig.build.json",
+    "compile": "tsc -p tsconfig.build.json",
     "lint": "eslint src/*",
     "lint:fix": "eslint src/* --fix",
     "test": "jest",
