@@ -8,9 +8,12 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { sayHello } from '@mevn/common';
 
 @Component
 export default class Counter extends Vue {
+  public messageFromCommon = `From Common: ${sayHello('world')}`;
+
   public messageFromBackend = 'From Backend: Loading...';
 
   private created(): void {
