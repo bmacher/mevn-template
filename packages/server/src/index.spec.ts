@@ -17,7 +17,7 @@ describe('express server', () => {
 
       resp.on('end', () => {
         expect(data).toBe('Hello World!');
-        done();
+        if (done) done();
       });
     });
   });
