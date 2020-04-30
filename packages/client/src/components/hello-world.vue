@@ -9,6 +9,6 @@ import { sayHello } from '@mevn/common';
 
 @Component
 export default class Counter extends Vue {
-  public message = `From Common: ${sayHello('world')}`;
+  public message = `From Common: ${sayHello('World')}`;
 }
 </script>
