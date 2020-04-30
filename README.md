@@ -12,9 +12,12 @@
 - package as dependency
   - yarn workspace @mevn/server add @mevn/common did not work
   - @0.1.0 -> need to specify version
-- vue app add @mevn/common
+- client add @mevn/common
   -  `../common/dist/index.js' should be in one project
-  - https://github.com/vuejs/vue-cli/issues/2421
+  - moved from dist/index.js to src/index.ts because common is included into build direcly
+  - add resolve with alias to webpack in vue.config.js
+  - add project to eslintrc
+  - https://forum.vuejs.org/t/monorepo-for-a-mevn-stack-application/93998
 
 ## Resources
 
