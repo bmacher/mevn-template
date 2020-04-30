@@ -4,10 +4,10 @@
   "author": "Benjamin Macher",
   "description": "Shared functionality of mevn.",
   "license": "MIT",
-  "main": "dist/index",
-  "types": "dist/index",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
   "files": [
-    "dist"
+    "src"
   ],
   "scripts": {
     "build": "yarn build:clean && yarn compile",
