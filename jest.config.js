@@ -1,8 +1,11 @@
 module.exports = {
-  projects: ['<rootDir>/packages/*/jest.config.js'],
+  projects: [
+    '<rootDir>/packages/common/jest.config.js',
+    '<rootDir>/packages/server/jest.config.js',
+  ],
   
   collectCoverageFrom: [
-    'src/**/*.{ts,vue,tsx}',
+    'src/**/*.{ts,vue,tsx}'
   ],
-  coverageReporters: ['text', 'text-summary', 'html-spa']
+  coverageReporters: ['text', 'text-summary', 'html-spa'],
 }
