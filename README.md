@@ -1,3 +1,6 @@
+[![Node CI](https://github.com/bmacher/mevn/workflows/Node%20CI/badge.svg)](https://github.com/bmacher/mevn/actions?query=workflow%3A%22Node+CI%22)
+[![GitHub license](https://img.shields.io/github/license/bmacher/mevn.svg)](https://github.com/bmacher/mevn/blob/master/LICENSE)
+
 # Monorepo (M)EVN Stack
 
 ## Problems
