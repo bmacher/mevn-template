@@ -1,6 +1,6 @@
 import HelloWorld from './hello-world.vue';
 
-// eslint-disable-next-line import/prefer-default-export
 export {
+  // eslint-disable-next-line import/prefer-default-export
   HelloWorld,
-}
+};
