@@ -1,5 +1,6 @@
 [![Node CI](https://github.com/bmacher/mevn/workflows/Node%20CI/badge.svg)](https://github.com/bmacher/mevn/actions?query=workflow%3A%22Node+CI%22)
 [![GitHub license](https://img.shields.io/github/license/bmacher/mevn.svg)](https://github.com/bmacher/mevn/blob/master/LICENSE)
+[![Dependabot Enabled](https://api.dependabot.com/badges/status?host=github&repo=bmacher/mevn-template)](https://github.com/bmacher/mevn-template/network/updates)
 
 # Monorepo (M)EVN Stack
 
