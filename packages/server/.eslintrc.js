@@ -54,6 +54,19 @@ module.exports = {
         selector: 'ForOfStatement'
       }
     ],
-    '@typescript-eslint/interface-name-prefix': 'warn'
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        // No 'I' prefix for interfaces
+        // Guideline by TypeScript for contributers.
+        // https://github.com/microsoft/TypeScript/wiki/Coding-guidelines#names
+        selector: 'interface',
+        format: ['PascalCase'],
+        custom: {
+          regex: '^[^I]',
+          match: true,
+        },
+      },
+    ],
   }
 }
