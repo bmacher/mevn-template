@@ -25,7 +25,6 @@
       "node",
       "express",
       "cors",
-      "jest"
     ],
     "charset": "utf8",
     "esModuleInterop": true,

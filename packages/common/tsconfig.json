@@ -21,9 +21,7 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    "types": [
-      "jest"
-    ],
+    "types": [],
     "charset": "utf8",
     "esModuleInterop": true,
     /* Source Map Options */
