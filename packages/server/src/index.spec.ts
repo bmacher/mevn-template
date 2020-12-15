@@ -1,4 +1,6 @@
-import { describe, it, expect } from '@jest/globals';
+import {
+  describe, it, expect, afterAll,
+} from '@jest/globals';
 import http from 'http';
 import { server } from '.';
 
